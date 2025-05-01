@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MALIK PUBG MART</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #000000, #001f3f);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: white;
+      animation: glow 2s infinite alternate;
+      margin-top: 20px;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffffff; }
+      to { text-shadow: 0 0 20px #00ffff; }
+    }
+    .product-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+    .product-button {
+      background-color: #111;
+      border: 2px solid #00ffff;
+      border-radius: 15px;
+      padding: 10px;
+      width: 180px;
+      height: 180px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .product-button:hover {
+      transform: scale(1.05);
+    }
+    .product-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .ratelist-image {
+      margin-top: 20px;
+      display: none;
+    }
+    .ratelist-image img {
+      width: 90%;
+      max-width: 500px;
+      border: 3px solid #00ffff;
+      border-radius: 15px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    .contact-info {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>MALIK PUBG MART</h1>
+
+  <div class="product-buttons">
+    <div class="product-button" onclick="showRateList('uc')">
+      <img src="https://raw.githubusercontent.com/arslanmalik999/PUBG-STORE-BY-MALIK/main/assets/images/pubg%20uc.jpg" alt="PUBG UC">
+    </div>
+    <div class="product-button" onclick="showRateList('accounts')">
+      <img src="https://raw.githubusercontent.com/arslanmalik999/PUBG-STORE-BY-MALIK/main/assets/images/pubg%20accounts.jpg" alt="PUBG Accounts">
+    </div>
+    <div class="product-button" onclick="showRateList('popularity')">
+      <img src="https://raw.githubusercontent.com/arslanmalik999/PUBG-STORE-BY-MALIK/main/assets/images/populatory%20battle.jpg" alt="Popularity Battle">
+    </div>
+    <div class="product-button" onclick="showRateList('homevotes')">
+      <img src="https://raw.githubusercontent.com/arslanmalik999/PUBG-STORE-BY-MALIK/main/assets/images/pubg%20homevotes.jpg" alt="Home Votes">
+    </div>
+    <div class="product-button" onclick="showRateList('ludo')">
+      <img src="https://raw.githubusercontent.com/arslanmalik999/PUBG-STORE-BY-MALIK/main/assets/images/yalla%20ludo.jpg" alt="Yalla Ludo">
+    </div>
+  </div>
+
+  <div class="ratelist-image" id="ratelist">
+    <img id="ratelist-img" src="" alt="Rate List">
+  </div>
+
+  <a class="whatsapp-button" href="https://wa.me/923057913067" target="_blank">💬</a>
+
+  <div class="contact-info">
+    <p>Contact: 0305 7913067</p>
+    <p>Email: arslanmm425@gmail.com</p>
+  </div>
+
+  <script>
+    function showRateList(type) {
+      let img = document.getElementById("ratelist-img");
+      let box = document.getElementById("ratelist");
+
+      if (type === "uc") {
+        img.src = "https://raw.githubusercontent.com/arslanmalik999/PUBG-STORE-BY-MALIK/main/assets/images/UC%20RATELIST.jpeg";
+      } else if (type === "ludo") {
+        img.src = "https://raw.githubusercontent.com/arslanmalik999/PUBG-STORE-BY-MALIK/main/assets/images/LUDO%20RATELIST.jpeg";
+      } else {
+        img.src = "";
+        box.style.display = "none";
+        return;
+      }
+
+      box.style.display = "block";
+    }
+  </script>
+</body>
+</html>
